@@ -52,7 +52,7 @@
                             }
                         }
                         if (flag) {
-                            appendPre('Email Column not found.');
+                            appendPre('Email Column not found.\n\Please Wait Redirecting Back.');
                             window.setTimeout(function () {
                                 window.location.href = "/LinkWokDemo/index.jsp";
                             }, 5000);
@@ -120,9 +120,24 @@
         </script>
     </head>
     <body>
+        <h3>Email Columns From Spreadsheet</h3>
+        <h5>Please wait while we get your email columns.</h5>
         <form id="fileContentForm" action="email.jsp" method="post">
-            Columns: <span id="columns"></span><br/>
-            <button type="button" onclick="fetchEmailColumns();">Submit</button>
+            <table border="0">
+                <tr>
+                    <td>
+                        Column Names: 
+                    </td>
+                    <td>
+                        <span id="columns"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="fetchEmailColumns();">Submit</button>
+                    </td>
+                </tr>
+            </table>
             <input type="hidden" name="column" id="hidden-column"/>
         </form>
         <pre id="output"></pre>

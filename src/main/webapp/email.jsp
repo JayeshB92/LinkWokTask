@@ -34,12 +34,41 @@
         </script>
     </head>
     <body onload="appendEmailAddresses();">
-        <h3>Email Form</h3>
+        <h3>Send Email</h3>
+        <h4>Sending email functionality is not enabled yet, as it is a demo application.</h4>
+        <h4>So 'Send Mails' button won't do anything.</h4>
         <form action="#" method="post">
-            To: <textarea id="to" readonly="true" cols="40" rows="3" name="to"></textarea><br/>
-            Subject: <input type="text" id="subject" name="subject"/><br/>
-            Message: <textarea cols="40" rows="3" name="messsge"></textarea><br/>
-            <button type="submit">Send Mails</button>
+            <table border="0">
+                <tr>
+                    <td>
+                        To:
+                    </td>
+                    <td>
+                        <textarea id="to" readonly="true" cols="40" rows="3" name="to"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Subject:
+                    </td>
+                    <td>
+                        <input type="text" id="subject" name="subject"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Message:
+                    </td>
+                    <td>
+                        <textarea cols="40" rows="3" name="messsge"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button">Send Mails</button>
+                    </td>
+                </tr>
+            </table>
         </form>
     </body>
 </html>

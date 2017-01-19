@@ -73,17 +73,32 @@
     </head>
     <body>
         <div id="authorize-div" style="display: none">
+            <h2>Connect With Google</h2><br/>
             <span>Authorize access to Google Sheets API</span><br/>
             <!--Button for the user to click to initiate auth sequence -->
             <button id="authorize-button" onclick="handleAuthClick(event)">
                 Connect With Google
-            </button>
+            </button><br/><br/>
         </div>
+        <h2>Spreadsheets From Your Google Drive</h2>
         <form action="filecontent.jsp" method="post">
-            Files: <select id="files" name="file" required="true">
-                <option value="">Select File</option>
-            </select><br/>
-            <button type="submit">Submit</button>
+            <table border="0">
+                <tr>
+                    <td>
+                        Files:
+                    </td>
+                    <td>
+                         <select id="files" name="file" required="true">
+                            <option value="">Select File</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
         </form>
         <pre id="output"></pre>
     </body>
